@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 7377239314993407261}
   - component: {fileID: 7377239314993407262}
   - component: {fileID: 7377239314993407260}
-  - component: {fileID: 7377239314993407259}
   - component: {fileID: 7377239314993407257}
   - component: {fileID: 7377239314993407258}
   - component: {fileID: 7377239314993407256}
@@ -156,20 +155,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7377239314993407259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7377239314993407263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad9a0be00c0b84e9eb3b4fba37cf4595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 1
-  InvulnerabilityTimeout: 2
 --- !u!114 &7377239314993407257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,9 +168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 90
+  ViewDistance: 5
   Guns:
   - {fileID: 7377239315346825488}
   - {fileID: 7377239314901379351}
+  WayPoints: []
   Health: 1
 --- !u!60 &7377239314993407258
 PolygonCollider2D:

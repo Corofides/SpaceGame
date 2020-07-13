@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
 
     public float SpawnRate = 10f;
     public GameObject EnemyPrefab;
+    public float MaxEnemies;
+    public WayPoint[] WayPoints;
 
     private float _coolDownTimer = 2f;
     private int _layer = 9;
@@ -30,6 +32,8 @@ public class EnemySpawner : MonoBehaviour
         enemyObject.transform.position = enemyPosition;
         enemyObject.layer = _layer;
 
+        enemyObject.GetComponent<EnemyController>().SetWayPoints(WayPoints);
+
         enemyObject.transform.SetParent(transform);
         
     }
@@ -43,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
             return;
         }
 
-        if (_enemies.Count < 3)
+        if (_enemies.Count < MaxEnemies)
         {  
             GameObject enemyObject = Instantiate(EnemyPrefab);
             SetupEnemy(enemyObject);
